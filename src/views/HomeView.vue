@@ -14,6 +14,8 @@ export default {
   components: {
     HelloWorld
   },
-  created () {}
+  created () {
+    console.log(11)
+  }
 }
 </script>
