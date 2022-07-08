@@ -57,10 +57,11 @@
 import { ref } from 'vue'
 import { validatePassword } from './rules'
 import { useStore } from 'vuex'
-
+import { useRouter } from 'vue-router'
 const loading = ref(false)
 const loginFormRef = ref(null)
 const store = useStore()
+const router = useRouter()
 const loginForm = ref({
   username: 'super-admin',
   password: '123456'
@@ -99,6 +100,7 @@ const handleLogin = () => {
       .dispatch('user/login', loginForm.value)
       .then(() => {
         loading.value = false
+        router.push('/')
       })
       .catch((err) => {
         loading.value = false

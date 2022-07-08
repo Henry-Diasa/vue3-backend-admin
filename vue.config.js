@@ -22,11 +22,11 @@ module.exports = defineConfig({
       .end()
   },
   devServer: {
-    proxy: {
-      '/api': {
-        target: '',
-        changeOrigin: true // 是否跨域
-      }
-    }
+    // proxy: {
+    //   '/api': {
+    //     target: '',
+    //     changeOrigin: true // 是否跨域
+    //   }
+    // }
   }
 })
