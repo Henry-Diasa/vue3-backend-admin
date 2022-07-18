@@ -17,7 +17,7 @@
               <el-dropdown-item> 首页 </el-dropdown-item>
             </router-link>
             <a target="_blank" href="">
-              <el-dropdown-item>课程主页</el-dropdown-item>
+              <el-dropdown-item>课程</el-dropdown-item>
             </a>
             <el-dropdown-item divided> 退出登录 </el-dropdown-item>
           </el-dropdown-menu>
