@@ -1,4 +1,4 @@
-import { login } from '@/api/sys'
+import { login, getUserInfo } from '@/api/sys'
 import { setItem, getItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
 import md5 from 'md5'
@@ -6,12 +6,16 @@ import md5 from 'md5'
 export default {
   namespaced: true,
   state: () => ({
-    token: getItem(TOKEN)
+    token: getItem(TOKEN),
+    userInfo: {}
   }),
   mutations: {
     setToken(state, token) {
       state.token = token
       setItem(TOKEN, token)
+    },
+    setUserInfo(state, userInfo) {
+      state.userInfo = userInfo
     }
   },
   actions: {
@@ -36,6 +40,22 @@ export default {
         //     reject(err)
         //   })
       })
+    },
+    async getUserInfo(context) {
+      // const res = await getUserInfo()
+      console.log(getUserInfo)
+      const res = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({
+            username: 'xxx',
+            id: '12d',
+            avatar:
+              'https://img.onlinedown.net/download/202202/153635-620a06836cced.jpg'
+          })
+        }, 1000)
+      })
+      this.commit('user/setUserInfo', res)
+      return res
     }
   }
 }
