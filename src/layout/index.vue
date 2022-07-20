@@ -7,7 +7,6 @@
     />
     <div class="main-container">
       <div class="fixed-header">
-        <!-- 顶部的 navbar -->
         <navbar />
       </div>
       <!-- 内容区 -->
