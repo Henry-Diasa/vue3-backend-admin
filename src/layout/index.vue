@@ -19,12 +19,13 @@
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar/index'
 import AppMain from './components/AppMain.vue'
-import variables from '@/styles/variables.scss'
+import variables from '@/styles/variables.module.scss'
+console.log(variables, 888)
 </script>
 
 <style lang="scss" scoped>
 @import '~@/styles/mixin.scss';
-@import '~@/styles/variables.scss';
+@import '~@/styles/variables.module.scss';
 .app-wrapper {
   @include clearfix;
   position: relative;
