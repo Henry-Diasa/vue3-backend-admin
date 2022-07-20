@@ -7,6 +7,8 @@ function resolve(dir) {
 module.exports = defineConfig({
   transpileDependencies: true,
   outputDir: 'docs',
+  publicPath:
+    process.env.NODE_ENV === 'production' ? '/vue3-backend-admin/' : '/',
   chainWebpack(config) {
     // 设置 svg-sprite-loader
     config.module.rule('svg').exclude.add(resolve('src/icons')).end()
