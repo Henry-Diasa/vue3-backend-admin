@@ -1,7 +1,7 @@
-import { login, getUserInfo } from '@/api/sys'
+// import { login, getUserInfo } from '@/api/sys'
 import { setItem, getItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
-import md5 from 'md5'
+// import md5 from 'md5'
 
 export default {
   namespaced: true,
@@ -27,7 +27,7 @@ export default {
           this.commit('user/setToken', 'adadqweq123sadasdasd')
           resolve()
         }, 1000)
-        console.log(login, md5)
+        // console.log(login, md5)
         // 调后端接口
         // login({
         //   username,
@@ -43,7 +43,7 @@ export default {
     },
     async getUserInfo(context) {
       // const res = await getUserInfo()
-      console.log(getUserInfo)
+      // console.log(getUserInfo)
       const res = await new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve({
