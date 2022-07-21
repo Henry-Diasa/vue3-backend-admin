@@ -1,6 +1,8 @@
 // import { login, getUserInfo } from '@/api/sys'
-import { setItem, getItem } from '@/utils/storage'
+import { setItem, getItem, removeAllItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
+import { setTimeStamp } from '@/utils/auth'
+import router from '@/router'
 // import md5 from 'md5'
 
 export default {
@@ -25,6 +27,8 @@ export default {
         // 先mock数据
         setTimeout(() => {
           this.commit('user/setToken', 'adadqweq123sadasdasd')
+          // 保存登录时间
+          setTimeStamp()
           resolve()
         }, 1000)
         // console.log(login, md5)
@@ -56,6 +60,12 @@ export default {
       })
       this.commit('user/setUserInfo', res)
       return res
+    },
+    logout() {
+      this.commit('user/setToken', '')
+      this.commit('user/setUserInfo', {})
+      removeAllItem()
+      router.push('/login')
     }
   }
 }
