@@ -1,8 +1,8 @@
 <template>
-  <div></div>
+  <div>import</div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import {} from 'vue'
 </script>
 

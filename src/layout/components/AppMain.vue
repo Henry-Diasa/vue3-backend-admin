@@ -1,8 +1,10 @@
 <template>
-  <div class="app-main">AppMain</div>
+  <div class="app-main">
+    <router-view></router-view>
+  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .app-main {

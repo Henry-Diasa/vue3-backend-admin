@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const path = require('path')
 
 function resolve(dir) {
@@ -6,6 +7,9 @@ function resolve(dir) {
 }
 module.exports = defineConfig({
   transpileDependencies: true,
+  configureWebpack: {
+    plugins: [new NodePolyfillPlugin()]
+  },
   outputDir: 'docs',
   publicPath:
     process.env.NODE_ENV === 'production' ? '/vue3-backend-admin/' : '/',

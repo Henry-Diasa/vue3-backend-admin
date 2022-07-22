@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue3_admin"]=self["webpackChunkvue3_admin"]||[]).push([[376],{6376:function(n,u,e){e.r(u),e.d(u,{default:function(){return i}});var t=e(3396),a={__name:"404",setup(n){return(n,u)=>((0,t.wg)(),(0,t.iD)("div",null,"404"))}};const r=a;var i=r}}]);
+//# sourceMappingURL=376.cb7ff74d.js.map
