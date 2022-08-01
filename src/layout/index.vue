@@ -11,6 +11,8 @@
     <div class="main-container">
       <div class="fixed-header">
         <navbar />
+        <!-- tags -->
+        <tags-view></tags-view>
       </div>
       <!-- 内容区 -->
       <app-main />
@@ -22,6 +24,7 @@
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar/index'
 import AppMain from './components/AppMain.vue'
+import TagsView from '@/components/TagsView/index'
 import variables from '@/styles/variables.module.scss'
 console.log(variables, 888)
 </script>
